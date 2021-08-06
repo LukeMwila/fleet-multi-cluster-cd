@@ -1,0 +1,14 @@
+kind: GitRepo
+apiVersion: fleet.cattle.io/v1alpha1
+metadata:
+  name: setting-up-eks-cluster-dojo
+  namespace: clusters
+spec:
+  repo: https://github.com/LukeMwila/setting-up-eks-cluster-dojo
+  paths:
+  - manifests
+  targets:
+  - name: cluster-3d0bf1a64ecc
+    clusterSelector:
+      matchLabels:
+        fleet.cattle.io/cluster: cluster-3d0bf1a64ecc

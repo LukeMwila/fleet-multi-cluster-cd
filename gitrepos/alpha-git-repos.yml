@@ -1,0 +1,48 @@
+---
+kind: GitRepo
+apiVersion: fleet.cattle.io/v1alpha1
+metadata:
+  name: graphql
+  namespace: clusters
+spec:
+  repo: https://github.com/LukeMwila/mock-ecommerce-backend
+  targetNamespace: ecommerce
+  paths:
+  - graphql/raw-manifests
+  targets:
+  - name: cluster-95f8f95f4182
+    clusterSelector:
+      matchLabels:
+        fleet.cattle.io/cluster: cluster-95f8f95f4182
+---
+kind: GitRepo
+apiVersion: fleet.cattle.io/v1alpha1
+metadata:
+  name: orders
+  namespace: clusters
+spec:
+  repo: https://github.com/LukeMwila/mock-ecommerce-backend
+  targetNamespace: ecommerce
+  paths:
+  - orders/raw-manifests
+  targets:
+  - name: cluster-95f8f95f4182
+    clusterSelector:
+      matchLabels:
+        fleet.cattle.io/cluster: cluster-95f8f95f4182
+---
+kind: GitRepo
+apiVersion: fleet.cattle.io/v1alpha1
+metadata:
+  name: products
+  namespace: clusters
+spec:
+  repo: https://github.com/LukeMwila/mock-ecommerce-backend
+  targetNamespace: ecommerce
+  paths:
+  - products/raw-manifests
+  targets:
+  - name: cluster-95f8f95f4182
+    clusterSelector:
+      matchLabels:
+        fleet.cattle.io/cluster: cluster-95f8f95f4182
