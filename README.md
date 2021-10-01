@@ -18,7 +18,7 @@ Refer to `fleet-eks-clusters/README.md`.
 Refer to `fleet-gke-cluster/README.md`.
 
 ## Create AKS Cluster
-To be created.
+Refer to `fleet-aks-cluster/README.md`.
 
 ## Fleet Controller Cluster & Downstream Cluster Registration
 In order for your Fleet multi cluster management installation to properly work it is important the correct API server URL and CA certificates are configured properly. The Fleet agents will communicate to the Kubernetes API server URL. This means the Kubernetes API server must be accessible to the downstream clusters. You will also need to obtain the CA certificate of the API server.
